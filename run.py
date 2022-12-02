@@ -1,9 +1,9 @@
 import random
 
-print('Welcome to Battleship game!')
-tutorial = print(str(input('Do you want to read the tutorial?(yes/no)')))
+print('Ahoy Captain! Welcome to Battleship !')
+tutorial = print(str(input('Do you want to read the tutorial?(aye/no)')))
 
-if tutorial == 'yes':
+if tutorial == 'aye':
     pass
 elif tutorial == 'no':
     print('Let\'s play!')
@@ -25,3 +25,10 @@ for i in range(column_num):
         print('Only water')
     else:
         print('You found my ship')
+
+target = int(input('Captain, time to shoot:'))
+
+if grid[target] > 75:
+    print('Yo-hoo-ho! That\'s a hit')
+else:
+    print('Miss!Aaaarrrrgggghhhh!')
