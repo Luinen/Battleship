@@ -1,7 +1,14 @@
 import random
 
 print('Welcome to Battleship game!')
-tutorial = print('Do you want to read the tutorial?')
+tutorial = print(str(input('Do you want to read the tutorial?(yes/no)')))
+
+if tutorial == 'yes':
+    pass
+elif tutorial == 'no':
+    print('Let\'s play!')
+else:
+    print('You have to use "yes" or "no" command')
 
 grid = []
 column_num = int(input('How many columns do you want?'))
