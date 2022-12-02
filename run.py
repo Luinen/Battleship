@@ -19,7 +19,9 @@ for i in range(column_num):
 print(grid)
 
 for i in range(column_num):
-    if  grid[i] > 50:
+    if  grid[i] > 75:
         print('You found the enemy ship')
+    elif grid[i] < 30:
+        print('Only water')
     else:
         print('You found my ship')
