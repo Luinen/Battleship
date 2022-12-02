@@ -17,3 +17,9 @@ for i in range(column_num):
     grid.append(random.randint(0,100))
 
 print(grid)
+
+for i in range(column_num):
+    if  grid[i] > 50:
+        print('You found the enemy ship')
+    else:
+        print('You found my ship')
