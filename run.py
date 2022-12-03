@@ -3,7 +3,7 @@ import random
 print('Ahoy Captain! Welcome to Battleship !')
 
 # TUTORIAL 
-
+"""
 tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 print(tutorial)
 
@@ -53,3 +53,9 @@ if grid[target] == 2:
     print('Yo-ho-ho! That\'s a hit')
 else:
     print('Miss!Aaaarrrrgggghhhh!')
+"""
+
+for i in range(0, 3):
+    for j in range(0, 3):
+        print(i, j, end=' ')
+    print()
