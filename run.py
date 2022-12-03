@@ -24,7 +24,8 @@ while tutorial:
         break
     else:
         print('You have to use "aye" or "no" command')
-        print(tutorial)
+        print(str(input('Do you want to read the tutorial?(aye/no)')))
+# fix while else part
 
 # GRID
 
@@ -37,6 +38,7 @@ if column_num == 5 or 10:
 else:
     print('You have to use "5" or "10" numbers')
     print(column_num)
+# fix column_num else part
 
 print(grid)
 
