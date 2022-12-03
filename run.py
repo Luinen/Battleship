@@ -55,6 +55,19 @@ else:
     print('Miss!Aaaarrrrgggghhhh!')
 """
 
+class Cell:
+"""
+    cell of the square
+
+     0 ->water, empty space
+     1 ->own ship
+     2 ->enemy ship
+"""
+    def __init__(self, contain, cell_row, cell_column):
+        self.contain = 0
+        self.cell_row = cell_row
+        self.cell_column = cell_column
+
 for i in range(0, 3):
     for j in range(0, 3):
         print(i, j, end=' ')
