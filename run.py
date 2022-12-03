@@ -25,13 +25,14 @@ while True:
 grid = []
 column_num = int(input('How many columns do you want?(5/10)'))
 
-if column_num == 5 or 10:
-    for i in range(column_num):
-        grid.append(random.randint(0,2))
-else:
-    print('You have to use "5" or "10" numbers')
-    print(column_num)
-# fix column_num else part
+while True:
+    if column_num == 5 or column_num == 10:
+        for i in range(column_num):
+            grid.append(random.randint(0,2))
+        break
+    else:
+        print('You have to use "5" or "10" numbers')
+        column_num = int(input('How many columns do you want?(5/10)'))
 
 print(grid)
 
