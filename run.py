@@ -34,7 +34,7 @@ column_num = int(input('How many columns do you want?(5/10)'))
 
 if column_num == 5 or 10:
     for i in range(column_num):
-        grid.append(random.randint(0,100))
+        grid.append(random.randint(0,2))
 else:
     print('You have to use "5" or "10" numbers')
     print(column_num)
@@ -43,12 +43,12 @@ else:
 print(grid)
 
 for i in range(column_num):
-    if grid[i] > 75:
-        print('You found the enemy ship')
-    elif grid[i] < 30:
-        print('Only water')
-    else:
+    if grid[i] == 0:
+        print('Only Water')
+    elif grid[i] == 1:
         print('You found my ship')
+    elif grid[i] == 2:
+        print('You found the enemy ship')
 
 # TARGET
 
