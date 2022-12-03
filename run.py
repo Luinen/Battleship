@@ -7,25 +7,18 @@ print('Ahoy Captain! Welcome to Battleship !')
 tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 print(tutorial)
 
-def tutorial_aye():
-    print('1.    ')
-    print('2.    ')
-    print('3.    ')
-    print('4.    ')
-    print('5.    ')
-    print('Savvy?')
-
-while tutorial:
+while True:
     if tutorial.lower() == 'aye':
-        print(tutorial_aye())
+        print('1.')
+        print('2.')
+        print('3.')
         break
     elif tutorial.lower() == 'no':
         print('Let\'s play!')
         break
     else:
         print('You have to use "aye" or "no" command')
-        print(str(input('Do you want to read the tutorial?(aye/no)')))
-# fix while else part
+        tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 
 # GRID
 
@@ -55,7 +48,7 @@ for i in range(column_num):
 target = int(input('Captain, time to shoot:(0-9)'))
 print('Aye Aye Captain!')
 
-if grid[target] > 75:
+if grid[target] == 2:
     print('Yo-ho-ho! That\'s a hit')
 else:
     print('Miss!Aaaarrrrgggghhhh!')
