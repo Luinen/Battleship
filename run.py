@@ -15,13 +15,16 @@ def tutorial_aye():
     print('5.    ')
     print('Savvy?')
 
-if tutorial.lower() == 'aye':
-    print(tutorial_aye())
-elif tutorial.lower() == 'no':
-    print('Let\'s play!')
-else:
-    print('You have to use "aye" or "no" command')
-    print(tutorial)
+while tutorial:
+    if tutorial.lower() == 'aye':
+        print(tutorial_aye())
+        break
+    elif tutorial.lower() == 'no':
+        print('Let\'s play!')
+        break
+    else:
+        print('You have to use "aye" or "no" command')
+        print(tutorial)
 
 # GRID
 
@@ -30,7 +33,7 @@ column_num = int(input('How many columns do you want?(5/10)'))
 
 if column_num == 5 or 10:
     for i in range(column_num):
-    grid.append(random.randint(0,100))
+        grid.append(random.randint(0,100))
 else:
     print('You have to use "5" or "10" numbers')
     print(column_num)
