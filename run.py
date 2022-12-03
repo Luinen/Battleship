@@ -4,12 +4,21 @@ print('Ahoy Captain! Welcome to Battleship !')
 tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 print(tutorial)
 
+def tutorial_aye():
+    print('1.    ')
+    print('2.    ')
+    print('3.    ')
+    print('4.    ')
+    print('5.    ')
+    print('Savvy?')
+
 if tutorial == 'aye':
-    print('Savvy? ')
+    print(tutorial_aye())
 elif tutorial == 'no':
     print('Let\'s play!')
 else:
     print('You have to use "aye" or "no" command')
+    print(tutorial)
 
 grid = []
 column_num = int(input('How many columns do you want?'))
