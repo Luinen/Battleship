@@ -1,7 +1,8 @@
 import random
 
 print('Ahoy Captain! Welcome to Battleship !')
-tutorial = print(str(input('Do you want to read the tutorial?(aye/no)')))
+tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
+print(tutorial)
 
 if tutorial == 'aye':
     print('Savvy? ')
@@ -19,7 +20,7 @@ for i in range(column_num):
 print(grid)
 
 for i in range(column_num):
-    if  grid[i] > 75:
+    if grid[i] > 75:
         print('You found the enemy ship')
     elif grid[i] < 30:
         print('Only water')
