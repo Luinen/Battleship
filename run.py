@@ -71,6 +71,7 @@ class Cell:
         self.cell_column = cell_column
 
 grid= []
+grid_size= 5
 for i in range(0, 3):
     for j in range(0, 3):
         print(i, j, end=' ')
@@ -80,3 +81,6 @@ for cell_row in range(5):
     for cell_column in range(5):
         grid.append( Cell(0, cell_row, cell_column))
     print(grid)
+
+for i in range(grid_size*grid_size):
+    print(grid[i].cell_row, grid[i].cell_column)
