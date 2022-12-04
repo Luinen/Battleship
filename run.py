@@ -1,9 +1,10 @@
+"""
 import random
 
 print('Ahoy Captain! Welcome to Battleship !')
 
 # TUTORIAL 
-"""
+
 tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 print(tutorial)
 
@@ -69,7 +70,13 @@ class Cell:
         self.cell_row = cell_row
         self.cell_column = cell_column
 
+grid= []
 for i in range(0, 3):
     for j in range(0, 3):
         print(i, j, end=' ')
     print()
+
+for cell_row in range(5):
+    for cell_column in range(5):
+        grid.append( Cell(0, cell_row, cell_column))
+    print(grid)
