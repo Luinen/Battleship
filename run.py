@@ -91,3 +91,6 @@ ship_column = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}
 
 ship_location= grid_size*ship_row+ship_column
 print(ship_location)
+
+grid[ship_location].contain= 1
+print(grid[ship_location].contain)1
