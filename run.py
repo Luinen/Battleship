@@ -87,10 +87,25 @@ print(search_element_index)
 print(grid[grid_size*search_row+search_column].cell_row, grid[grid_size*search_row+search_column].cell_column)
 
 ship_row =int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
-ship_column = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
+ship_column = int(input(f'Where do you want to put your ship?column 0-{grid_size-1}:'))
 
 ship_location= grid_size*ship_row+ship_column
 print(ship_location)
 
 grid[ship_location].contain= 1
-print(grid[ship_location].contain)1
+print(grid[ship_location].contain)
+
+ship_counter = 0
+while ship_counter < grid_size:
+    if (cell_row >= 0 and cell_column >= 0) and (cell_row <= grid_size-1 and cell_column <= grid_size-1):
+        cell_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
+        cell_column = int(input(f'Where do you want to put your ship?columnc 0-{grid_size-1}:'))
+#        own_ship = 1
+        ship_counter += 1
+#
+#    elif 
+#
+    else:
+        print('Use the specified range')
+        cell_row = int(input(f'Hova szeretned tenni a hajod?sor 0-{grid_size-1}:'))
+        cell_column = int(input(f'Hova szeretned tenni a hajod?oszlop 0-{grid_size-1}:'))
