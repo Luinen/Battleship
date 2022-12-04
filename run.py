@@ -78,7 +78,7 @@ for cell_row in range(5):
         grid.append( Cell(0, cell_row, cell_column))
 
 for i in range(grid_size*grid_size):
-    print(grid[i].cell_row, grid[i].cell_column)
+    grid[i].cell_row, grid[i].cell_column
 
 search_row= 2
 search_column= 1
@@ -88,3 +88,6 @@ print(grid[grid_size*search_row+search_column].cell_row, grid[grid_size*search_r
 
 ship_row =int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
 ship_column = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
+
+ship_location= grid_size*ship_row+ship_column
+print(ship_location)
