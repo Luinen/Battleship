@@ -1,4 +1,3 @@
-"""
 import random
 
 print('Ahoy Captain! Welcome to Battleship !')
@@ -57,13 +56,13 @@ else:
 """
 
 class Cell:
-    """
+    
     cell of the square
     
     0 ->water, empty space
     1 ->own ship
     2 ->enemy ship
-    """
+    
 
     def __init__(self, contain, cell_row, cell_column):
         self.contain = 0
@@ -109,3 +108,5 @@ while ship_counter < grid_size:
         print('Use the specified range')
         cell_row = int(input(f'Hova szeretned tenni a hajod?sor 0-{grid_size-1}:'))
         cell_column = int(input(f'Hova szeretned tenni a hajod?oszlop 0-{grid_size-1}:'))
+    
+    """
