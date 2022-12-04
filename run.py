@@ -85,3 +85,6 @@ search_column= 1
 search_element_index= grid_size*search_row+ search_column
 print(search_element_index)
 print(grid[grid_size*search_row+search_column].cell_row, grid[grid_size*search_row+search_column].cell_column)
+
+ship_row =int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
+ship_column = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
