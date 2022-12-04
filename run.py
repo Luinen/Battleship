@@ -44,9 +44,10 @@ while ship_counter < grid_size:
 import random
 
 class Cell:
+
     """
     define the grid
-    
+
     0 -water, empty space
     1 -own ship
     2 -enemy ship
@@ -55,6 +56,7 @@ class Cell:
         self.contain = 0
         self.cell_row = cell_row
         self.cell_column = cell_column
+
 
 def get_tutorial():
 
@@ -77,21 +79,20 @@ def get_tutorial():
 
 def get_grid():
 
-    grid=[]
+    grid = []
     grid_size = int(input('How many columns do you want?(5/10):'))
 
     while True:
         if grid_size == 5 or grid_size == 10:
             for cell_row in range(grid_size):
                 for cell_column in range(grid_size):
-                    grid.append( Cell(0, cell_row, cell_column))
+                    grid.append(Cell(0, cell_row, cell_column))
             break
         else:
             print('You have to use "5" or "10" numbers')
             grid_size = int(input('How many columns do you want?(5/10):'))
 
     return print(grid)
-
 
 
 def main():
