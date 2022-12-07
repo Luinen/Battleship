@@ -51,11 +51,12 @@ def get_tutorial():
             print('2. You aim to find your opponent\'s ships before it finds yours')
             print('3. You always find what you can answer at the end of each question.')
             print('4. First, you have to decide what size will be the playing field.')
+            print('5. Size 5 = 5 ships, size 10 = 10 ships')
             print('')
-            print('5. There is only one playing field')
-            print('6. After that, you have to choose the location of your ships.')
-            print('7. Finally, you have to hunt down your opponent\'s ships.')
-            print('The shots are marked with X, and the opponent\'s shots are marked with Y.')
+            print('6. There is only one playing field')
+            print('7. After that, you have to choose the location of your ships.')
+            print('8. Finally, you have to hunt down your opponent\'s ships.')
+            print('9. The shots are marked with X, and the opponent\'s shots are marked with Y.')
             print('Have fun!!!')
             tutorial_condition = False
         elif tutorial.lower() == 'no':
@@ -115,50 +116,42 @@ def get_user_ship(grid_size):
 
 
 # AI SHIP
-ship_counter = 0
-while ship_counter < grid_size:
+def get_ai_ship(grid_size):
+    ship_counter = 0
+    while ship_counter < grid_size:
+        ship_row = random.randint(0,grid_size-1)
+        ship_column = random.randint(0,grid_size-1)
+        choosen_ship_index = grid_size*ship_row + ship_column
+        if grid[choosen_ship_index].ship == ally_ship or grid[choosen_ship_index].ship == opponent_ship:
+            print('')
+        else:
+            grid[choosen_ship_index].ship = opponent_ship
+            ship_counter += 1
 
-    ship_row = random.randint(0,grid_size-1)
-    ship_column = random.randint(0,grid_size-1)
-    choosen_ship_index = grid_size*ship_row + ship_column
-
-    if grid[choosen_ship_index].ship == ally_ship or grid[choosen_ship_index].ship == opponent_ship:
-        continue
-    else:
-        grid[choosen_ship_index].ship = opponent_ship
-        ship_counter += 1
-
-# battlefield
-for i in range(grid_size*grid_size):
-    if(i%5==0):
-        print()
-    print(grid[i].ship, end="  ")
-print('')
 
 # USER SHOOT
-while True: 
-
-    target_row = int(input(f'Captain, time to shoot, row 0-{grid_size - 1}:'))
-    target_column = int(input(f'Captain, time to shoot, column 0-{grid_size - 1}:'))
-    target_index = grid_size * target_row + target_column
-
-    if grid[target_index].ship == opponent_ship:
-        print('Aye Aye Captain! HIT!')
-        grid[target_index].ship = 'X'
-        break
-    elif grid[target_index].ship == water:
-        print('Aye Aye Captain! MISS!')
-        grid[target_index].ship = 'X'
-        break
-    elif grid[target_index].ship == 'X':
-        print('Aye Ay......still nothing there')
-        continue
-    elif grid[target_index].ship == ally_ship:
-        print('Stop the TRAITOR!')
-        continue
-    else:
-        print('You can\'t shoot there')
-        continue
+def user_shoot(grid_size):
+    target_condition = True
+    while target_condition:
+        target_row = int(input(f'Captain, time to shoot, row 0-{grid_size - 1}:'))
+        target_column = int(input(f'Captain, time to shoot, column 0-{grid_size - 1}:'))
+        target_index = grid_size * target_row + target_column
+        if grid[target_index].ship == opponent_ship:
+            print('Aye Aye Captain! HIT!')
+            grid[target_index].ship = 'X'
+            global target_user_counter
+            target_user_counter += 1
+            target_condition = False
+        elif grid[target_index].ship == water:
+            print('Aye Aye Captain! MISS!')
+            grid[target_index].ship = 'X'
+            target_condition = False
+        elif grid[target_index].ship == 'X':
+            print('Aye Ay......still nothing there')
+        elif grid[target_index].ship == ally_ship:
+            print('Stop the TRAITOR!')
+        else:
+            print('You can\'t shoot there')
 
 # AI SHOOT
 print('They are firing')
@@ -170,36 +163,16 @@ while True:
 
     if grid[target_index].ship == ally_ship:
         print('They hit one of our ships.')
-        grid[target_index].ship = 'X'
+        grid[target_index].ship = 'Y'
         break
     elif grid[target_index].ship == water:
         print('They don\'t know where we are! MISS')
-        grid[target_index].ship = 'X'
+        grid[target_index].ship = 'Y'
         break
-    elif grid[target_index].ship == 'X':
+    elif grid[target_index].ship == 'Y':
         continue
     else:
         continue
-
-print('')
-if grid_size == 5:
-    for i in range(5):
-        print(i, end='  ')
-    print('')
-    for i in range(grid_size * grid_size):
-        if (i % 5 == 0):
-            print()
-        print(grid[i].ship, end="  ")
-    print('')
-else:
-    for i in range(10):
-        print(i, end='  ')
-    print('')
-    for i in range(grid_size * grid_size):
-        if (i % 10 == 0):
-            print()
-        print(grid[i].ship, end="  ")
-    print('')
 
 
 def main():
@@ -212,6 +185,8 @@ def main():
     final_grid_size = get_grid()
     display_grid(final_grid_size)
     get_user_ship(final_grid_size)
+    get_ai_ship(final_grid_size)
+
 
 print('Welcome to Battleship: OMEGA')
 main()
