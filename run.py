@@ -89,3 +89,27 @@ for i in range(grid_size*grid_size):
     print(grid[i].ship, end="  ")
 print('')
 
+# USER SHOOT
+while True: 
+
+    target_row = int(input(f'Captain, time to shoot, row 0-{grid_size - 1}:'))
+    target_column = int(input(f'Captain, time to shoot, column 0-{grid_size - 1}:'))
+    target_index = grid_size * target_row + target_column
+
+    if grid[target_index].ship == opponent_ship:
+        print('hit')
+        grid[target_index].ship = 'X'
+        break
+    elif grid[target_index].ship == water:
+        print('')
+        grid[target_index].ship = 'X'
+        break
+    elif grid[target_index].ship == 'X':
+        print('Still nothing')
+        continue
+    elif grid[target_index].ship == ally_ship:
+        print('Stop the TRAITOR!')
+        continue
+    else:
+        print('You can\'t shoot there')
+        continue
