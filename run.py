@@ -67,3 +67,15 @@ for i in range(grid_size*grid_size):
         print()
     print(grid[i].ship, end="  ")
 print('')
+
+
+ship_counter = 0
+while ship_counter < grid_size:
+    ship_row = random.randint(0,grid_size-1)
+    ship_column = random.randint(0,grid_size-1)
+    choosen_ship_index = grid_size*ship_row + ship_column
+    if (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
+        grid[choosen_ship_index].ship = opponent_ship
+        ship_counter += 1
+    else:
+        print('Use numbers in the specified range')
