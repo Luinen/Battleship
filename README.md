@@ -6,7 +6,7 @@
 
 Battleship OMEGA is a single player game against the AI. This python terminal small game gives you 5 minutes of fun for people who like guessing and luck. Try to find your opponent's ships before it finds yours. The game is simple and enjoyable. Good luck!
 
-![responsive_pic](assets/images/amiresponsive.png)
+![responsive_pic](/assets/images/battleship_omega.png)
 
 ## Features
 
