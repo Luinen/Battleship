@@ -39,10 +39,8 @@ battleship = """
 """
 print(battleship)
 
+
 # TUTORIAL
-
-
-
 def get_tutorial():
     tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
     tutorial_condition = True
@@ -67,19 +65,21 @@ def get_tutorial():
             print('You have to use "aye" or "no" command')
             tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 
-# GRID
-grid = []
-grid_size = int(input('How big should the gaming field be?(5/10):'))
 
-while True:
-    if grid_size == 5 or grid_size == 10:
-        for cell_row in range(grid_size):
-            for cell_column in range(grid_size):
-                grid.append(Cell(0, cell_row, cell_column))
-        break
-    else:
-        print('You have to use "5" or "10" numbers')
-        grid_size = int(input('How big should the gaming field be?(5/10):'))
+# GRID
+def get_grid():
+    grid_size = int(input('How big should the gaming field be?(5/10):'))
+    grid_condition = True
+    while grid_condition:
+        if grid_size == 5 or grid_size == 10:
+            for cell_row in range(grid_size):
+                for cell_column in range(grid_size):
+                    grid.append(Cell(0, cell_row, cell_column))
+            grid_condition = False
+        else:
+            print('You have to use "5" or "10" numbers')
+            grid_size = int(input('How big should the gaming field be?(5/10):'))
+    return grid_size
 
 
 print('')
@@ -218,6 +218,8 @@ def main():
     """
 
     get_tutorial()
+    final_grid_size = get_grid()
+    display_grid(final_grid_size)
 
 print('Welcome to Battleship: OMEGA')
 main()
