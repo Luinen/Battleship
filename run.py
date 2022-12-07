@@ -64,6 +64,8 @@ while ship_counter < grid_size:
     if (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
         grid[choosen_ship_index].ship = ally_ship
         ship_counter += 1
+    elif grid[choosen_ship_index].ship == ally_ship:
+        continue    
     else:
         print('Use numbers in the specified range')
 
@@ -76,10 +78,13 @@ while ship_counter < grid_size:
     choosen_ship_index = grid_size*ship_row + ship_column
 
     if grid[choosen_ship_index].ship == ally_ship or grid[choosen_ship_index].ship == opponent_ship:
+        print('not good')
         continue
     else:
         grid[choosen_ship_index].ship = opponent_ship
         ship_counter += 1
+        print('okay')
+    print('loop')
 
 for i in range(grid_size*grid_size):
     if(i%5==0):
