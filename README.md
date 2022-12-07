@@ -29,14 +29,14 @@ I explain the website features below.
 ![board](/assets/images/grid_battleship.png)
 
 - **Placing the ships**
-  - 
+  - After the grid selection, the users can decide where they want to place their ships.
+  - The users don't see the the computer choices.
+  - The AI randomly generates ships on the board.
 
-![score](assets/images/score.png)
+- **Target system**
+  - Everything is ready to play. The users start and then select the first target and after that the AI does the same.
 
-- **Game Over page**
-  - At the end of the quiz, the users can save their high score and enter their name, play again, or go back to the main menu. The form is easy to use and the placeholder helps the users.  
-
-![gameover](assets/images/gameover.png)
+![target_system](/assets/images/target_battleship.png)
 
 - **Leaderboard**
   - This part shows the saved usernames with their scores. The lowest points are at the bottom of the page, and the highest points are at the top.
