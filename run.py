@@ -49,6 +49,14 @@ while True:
         print('You have to use "5" or "10" numbers')
         grid_size = int(input('How many columns do you want?(5/10):'))
 
+
+for i in range(grid_size*grid_size):
+    if(i%5==0):
+        print()
+    print(grid[i].ship, end="  ")
+print('')
+
+
 water = 0
 ally_ship = 1
 opponent_ship = 2
