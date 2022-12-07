@@ -83,6 +83,7 @@ while ship_counter < grid_size:
         grid[choosen_ship_index].ship = opponent_ship
         ship_counter += 1
 
+# battlefield
 for i in range(grid_size*grid_size):
     if(i%5==0):
         print()
@@ -135,3 +136,9 @@ while True:
     else:
         print('You can\'t shoot there')
         continue
+
+for i in range(grid_size*grid_size):
+    if(i%5==0):
+        print()
+    print(grid[i].ship, end="  ")
+print('')
