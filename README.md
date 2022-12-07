@@ -4,7 +4,7 @@
 **Welcome to [Battleship OMEGA](https://battleshipomega.herokuapp.com/)!**
   
 
-Battleship OMEGA is a single player game against the AI. This small game gives you 5 minutes of fun for people who like guessing and luck.   The game is simple and enjoyable. Good luck!
+Battleship OMEGA is a single player game against the AI. This python terminal small game gives you 5 minutes of fun for people who like guessing and luck. Try to find your opponent's ships before it finds yours. The game is simple and enjoyable. Good luck!
 
 ![responsive_pic](assets/images/amiresponsive.png)
 
