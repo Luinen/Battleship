@@ -1,31 +1,126 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Battleship OMEGA
+  
 
-Welcome Luinen,
+**Welcome to [Battleship OMEGA](https://battleshipomega.herokuapp.com/)!**
+  
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+Battleship OMEGA is a single player game against the AI. This small game gives you 5 minutes of fun for people who like guessing and luck.   The game is simple and enjoyable. Good luck!
 
-## Reminders
+![responsive_pic](assets/images/amiresponsive.png)
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Features
 
-## Creating the Heroku app
+I explain the website features below.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+### **Existing features**
+  
 
-1. `heroku/python`
-2. `heroku/nodejs`
+- **Main menu**
+  - A solid page with Halloween style, there are three options. If you click on the start button, the game will start. 
+  - If the users want to know more about the instructions, they can click on the rules button. 
+  - And finally, the users can see the leaderboard if they click the high scores button.
+  - The active button appears with black border and purple box shadow , which highlights it from the background.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+  ![main_menu](assets/images/main_menu.png)
+  ![instructions](assets/images/instructions.png)
+  ![leaderboard](assets/images/emptyleaderboard.png)
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+- **4 choices**
+  - You can choose four different answers, and the active answer works the same as the main menu buttons.
 
-Connect your GitHub repository and deploy as normal.
+![choices](assets/images/choices.png)
 
-## Constraints
+  - If you choose the good answer, the background of the answer will be green.
+  
+![correctanswer](assets/images/correctanswer.png)
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+  - But if you choose the wrong answer, it will be red.
 
------
-Happy coding!
+![wronganswer](assets/images/wronganswer.png)
+
+- **Score**
+  - The user receives 100 points for each correct answer. Wrong answers don't give you points, and you can't get more than 1000 points.
+
+![score](assets/images/score.png)
+
+- **Game Over page**
+  - At the end of the quiz, the users can save their high score and enter their name, play again, or go back to the main menu. The form is easy to use and the placeholder helps the users.  
+
+![gameover](assets/images/gameover.png)
+
+- **Leaderboard**
+  - This part shows the saved usernames with their scores. The lowest points are at the bottom of the page, and the highest points are at the top.
+
+![leaderboard2](assets/images/leaderboard.png)
+
+### **Features left to implement**
+- I think a timer or a countdown would be a good idea to add to this quiz
+- I want to add a progress bar next to the score
+
+## Testing
+
+  - The game works as intended. 
+  - The scoring system is okay, it gives you 100 points for each correct answer. 
+  - I tested each button and answers.
+  - You have to fill out the username if you want to save your result. 
+  - Responsiveness is good enough for every platform. 
+
+#### **Validator Testing**
+
+- **HTML**
+  - First time running the html validator I got 1 error, 1 info and 1 warning message: 
+
+  ![imagespace](assets/images/htmlimagespace.png)
+  - I renamed the image that fixed the issue.
+  ![inputslash](assets/images/htmlinputslash.png)
+  - deleted the slash end of the input
+  ![htmlsection](assets/images/htmlsection.png)
+  - and deleted the section, because it was unnecessary.
+
+  - After these mistakes were fixed, no errors were returned when passing through the official [W3c validator](https://validator.w3.org/)
+
+- **PYTHON**
+  - I tested my codes continuously with the JS validator during my work. I made many mistakes. For example, I often used the wrong keyword when I defined variables(let and const).
+  - I forgot to call the function
+  - missing or unnecessary semicolons
+  - The quiz has 10 questions, but after a couple of questions the game froze. 
+  ```
+  questionInde
+  ```
+  - After i 
+
+  ```
+  question
+  ```
+
+
+![jsvalidator](assets/images/jsvalidator.png)
+  - After these mistakes were fixed, no errors were returned when passing through the official [JS validator](https://jshint.com/)
+
+## Bugs
+
+- If the users 
+- Unfortunately, I 
+
+## Deployment  
+
+- The site was deployed to GitHub pages. The steps to deploy are as follows: 
+  1. In the GitHub repository, navigate to the Settings tab.
+  2. From the source section drop-down menu, select the Master Branch.
+  3. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+  4. The live link can be found here: https://luinen.github.io/Halloweenquiz/
+
+- If you want to clone the repository:
+  1. In the GitHub repository, click on the 'Code'.
+  2. Click 'Open with GitHub Desktop' to clone and open the repository with GitHub Desktop.
+  3. Click 'Choose...' and, using the Finder window, navigate to a local path where you want to clone the repository. 
+  4. Click Clone.  
+
+
+## Credits
+
+#### Content
+
+- The questions for the ... were taken from [P]().
+- Instructions of the ... were taken from  [W]()
+- The idea of the rules ...was taken from [C]()
