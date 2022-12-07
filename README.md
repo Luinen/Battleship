@@ -57,35 +57,10 @@ I explain the website features below.
 
 #### **Validator Testing**
 
-- **HTML**
-  - First time running the html validator I got 1 error, 1 info and 1 warning message: 
-
-  ![imagespace](assets/images/htmlimagespace.png)
-  - I renamed the image that fixed the issue.
-  ![inputslash](assets/images/htmlinputslash.png)
-  - deleted the slash end of the input
-  ![htmlsection](assets/images/htmlsection.png)
-  - and deleted the section, because it was unnecessary.
-
-  - After these mistakes were fixed, no errors were returned when passing through the official [W3c validator](https://validator.w3.org/)
-
 - **PYTHON**
-  - I tested my codes continuously with the JS validator during my work. I made many mistakes. For example, I often used the wrong keyword when I defined variables(let and const).
-  - I forgot to call the function
-  - missing or unnecessary semicolons
-  - The quiz has 10 questions, but after a couple of questions the game froze. 
-  ```
-  questionInde
-  ```
-  - After i 
 
-  ```
-  question
-  ```
-
-
-![jsvalidator](assets/images/jsvalidator.png)
-  - After these mistakes were fixed, no errors were returned when passing through the official [JS validator](https://jshint.com/)
+  - No errors were returned.
+  ![python_checker](/assets/images/python_checker.png)
 
 ## Bugs
 - Solved Bugs
@@ -99,7 +74,7 @@ I explain the website features below.
   1. In the GitHub repository, navigate to the Settings tab.
   2. From the source section drop-down menu, select the Master Branch.
   3. Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
-  4. The live link can be found here: https://luinen.github.io/Halloweenquiz/
+  4. The heroku live link can be found here: https://battleshipomega.herokuapp.com/
 
 - If you want to clone the repository:
   1. In the GitHub repository, click on the 'Code'.
@@ -112,6 +87,4 @@ I explain the website features below.
 
 #### Content
 
-- The questions for the ... were taken from [P]().
-- Instructions of the ... were taken from  [W]()
-- The idea of the rules ...was taken from [C]()
+- Pirate slangs were taken from [Islads](https://www.islands.com/40-useful-pirate-phrases-for-national-talk-like-pirate-day/).

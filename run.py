@@ -119,8 +119,8 @@ def get_user_ship(grid_size):
 def get_ai_ship(grid_size):
     ship_counter = 0
     while ship_counter < grid_size:
-        ship_row = random.randint(0,grid_size-1)
-        ship_column = random.randint(0,grid_size-1)
+        ship_row = random.randint(0, grid_size-1)
+        ship_column = random.randint(0, grid_size-1)
         choosen_ship_index = grid_size*ship_row + ship_column
         if grid[choosen_ship_index].ship == ally_ship or grid[choosen_ship_index].ship == opponent_ship:
             print('')
@@ -158,7 +158,7 @@ def user_shoot(grid_size):
 def ai_shoot(grid_size):
     print('They are firing')
     target_condition = True
-    while target_condition: 
+    while target_condition:
         target_row = random.randint(0, grid_size - 1)
         target_column = random.randint(0, grid_size - 1)
         target_index = grid_size * target_row + target_column
@@ -166,7 +166,7 @@ def ai_shoot(grid_size):
             print('They hit one of our ships.')
             grid[target_index].ship = 'Y'
             global target_ai_counter
-            target_ai_counter +=1
+            target_ai_counter += 1
             target_condition = False
         elif grid[target_index].ship == water:
             print('They don\'t know where we are! MISS')
@@ -200,7 +200,8 @@ def main():
     if target_user_counter < target_ai_counter:
         print('Better luck next time')
     else:
-        print('Congratulations Captain!')
+        print('Congratulations Captain! The booty is ours')
+
 
 print('Welcome to Battleship: OMEGA')
 main()
