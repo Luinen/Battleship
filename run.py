@@ -42,9 +42,13 @@ tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 while True:
 
     if tutorial.lower() == 'aye':
-      print('1.Rules')
-      print('2.')
-      print('3.')
+      print('Welcome to Battleship: OMEGA')
+      print('You aim to find your opponent\'s ships before it finds yours')
+      print('You always find what you can answer at the end of each question.')
+      print('First, you have to decide what size will be the playing field.')
+      print('After that, you have to choose the location of your ships.')
+      print('Finally, you have to hunt down your opponent\'s ships.')
+      print('Have fun!')
       break
 
     elif tutorial.lower() == 'no':
