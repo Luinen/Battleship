@@ -23,21 +23,13 @@ I explain the website features below.
   ![tutorial](/assets/images/tutorial_battleship.png)
  
 
-- **4 choices**
-  - You can choose four different answers, and the active answer works the same as the main menu buttons.
+- **Grid**
+  - The users can decide the board size. There are 2 options. 5x5 or 10x10.
 
-![choices](assets/images/choices.png)
+![board](/assets/images/grid_battleship.png)
 
-  - If you choose the good answer, the background of the answer will be green.
-  
-![correctanswer](assets/images/correctanswer.png)
-
-  - But if you choose the wrong answer, it will be red.
-
-![wronganswer](assets/images/wronganswer.png)
-
-- **Score**
-  - The user receives 100 points for each correct answer. Wrong answers don't give you points, and you can't get more than 1000 points.
+- **Placing the ships**
+  - 
 
 ![score](assets/images/score.png)
 
