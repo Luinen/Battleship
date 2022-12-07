@@ -97,25 +97,22 @@ def display_grid(grid_size):
     print('')
 
 
-water = 0
-ally_ship = 1
-opponent_ship = 2
-
 # USER SHIP
-ship_counter = 0
-while ship_counter < grid_size:
+def get_user_ship(grid_size):
+    ship_counter = 0
+    while ship_counter < grid_size:
+        ship_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
+        ship_column = int(input(f'Where do you want to put your ship?column 0-{grid_size-1}:'))
+        choosen_ship_index = grid_size*ship_row + ship_column
+        if grid[choosen_ship_index].ship == ally_ship:
+            print('It has already taken')
+        elif (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
+            grid[choosen_ship_index].ship = ally_ship
+            ship_counter += 1
+            print('Great choice')
+        else:
+            print('Use numbers in the specified range')
 
-    ship_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
-    ship_column = int(input(f'Where do you want to put your ship?column 0-{grid_size-1}:'))
-    choosen_ship_index = grid_size*ship_row + ship_column
-
-    if grid[choosen_ship_index].ship == ally_ship:
-        continue    
-    elif (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
-        grid[choosen_ship_index].ship = ally_ship
-        ship_counter += 1
-    else:
-        print('Use numbers in the specified range')
 
 # AI SHIP
 ship_counter = 0
@@ -214,6 +211,7 @@ def main():
     get_tutorial()
     final_grid_size = get_grid()
     display_grid(final_grid_size)
+    get_user_ship(final_grid_size)
 
 print('Welcome to Battleship: OMEGA')
 main()
