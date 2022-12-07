@@ -15,15 +15,13 @@ I explain the website features below.
 ### **Existing features**
   
 
-- **Main menu**
-  - A solid page with Halloween style, there are three options. If you click on the start button, the game will start. 
-  - If the users want to know more about the instructions, they can click on the rules button. 
-  - And finally, the users can see the leaderboard if they click the high scores button.
-  - The active button appears with black border and purple box shadow , which highlights it from the background.
+- **Tutorial**
+  - The tutorial understands the game well for the users.
+  - If the users knows the rules, they can skip this part by answering no.
+  - Any other response will ask the question again.
 
-  ![main_menu](assets/images/main_menu.png)
-  ![instructions](assets/images/instructions.png)
-  ![leaderboard](assets/images/emptyleaderboard.png)
+  ![tutorial](/assets/images/tutorial_battleship.png)
+ 
 
 - **4 choices**
   - You can choose four different answers, and the active answer works the same as the main menu buttons.
