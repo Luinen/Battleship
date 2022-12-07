@@ -56,3 +56,12 @@ while ship_counter < grid_size:
     if (cell_row >= 0 and cell_column >= 0) and (cell_row <= grid_size-1 and cell_column <= grid_size-1):
         cell_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
         cell_column = int(input(f'Where do you want to put your ship?columns 0-{grid_size-1}:'))
+        ship_counter += 1
+    else:
+        print('Use numbers in the specified range')
+
+for i in range(grid_size*grid_size):
+    if(i%5==0):
+        print()
+    print(grid[i].ship, end="  ")
+print('')
