@@ -101,7 +101,7 @@ while True:
         grid[target_index].ship = 'X'
         break
     elif grid[target_index].ship == water:
-        print('')
+        print('miss')
         grid[target_index].ship = 'X'
         break
     elif grid[target_index].ship == 'X':
@@ -109,6 +109,28 @@ while True:
         continue
     elif grid[target_index].ship == ally_ship:
         print('Stop the TRAITOR!')
+        continue
+    else:
+        print('You can\'t shoot there')
+        continue
+
+# AI SHOOT
+while True: 
+
+    target_row = random.randint(0, grid_size - 1)
+    target_column = random.randint(0, grid_size - 1)
+    target_index = grid_size * target_row + target_column
+
+    if grid[target_index].ship == ally_ship:
+        print('hit')
+        grid[target_index].ship = 'X'
+        break
+    elif grid[target_index].ship == water:
+        print('miss')
+        grid[target_index].ship = 'X'
+        break
+    elif grid[target_index].ship == 'X':
+        print('Still nothing')
         continue
     else:
         print('You can\'t shoot there')
