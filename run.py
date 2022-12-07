@@ -82,24 +82,18 @@ def get_grid():
     return grid_size
 
 
-print('')
-if grid_size == 5:
-    for i in range(5):
+def display_grid(grid_size):
+    print('')
+    for i in range(grid_size):
         print(i, end='  ')
     print('')
     for i in range(grid_size * grid_size):
-        if (i % 5 == 0):
+        if (i % grid_size == 0):
             print()
-        print(grid[i].ship, end="  ")
-    print('')
-else:
-    for i in range(10):
-        print(i, end='  ')
-    print('')
-    for i in range(grid_size * grid_size):
-        if (i % 10 == 0):
-            print()
-        print(grid[i].ship, end="  ")
+        if grid[i].ship == opponent_ship:
+            print(water, end="  ")
+        else:
+            print(grid[i].ship, end='  ')
     print('')
 
 
