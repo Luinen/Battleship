@@ -1,20 +1,17 @@
 import random
-grid= []
-water= 0
-ally_ship= 1
-opponent_ship= 2
-target_user_counter= 0
-target_ai_counter= 0
+grid = []
+water = 0
+ally_ship = 1
+opponent_ship = 2
+target_user_counter = 0
+target_ai_counter = 0
+
 
 # CLASS
 class Cell:
 
     """
-    define the grid
-
-    0 -water, empty space
-    1 -own ship
-    2 -enemy ship
+   define the grid
     """
 
     def __init__(self, ship, cell_row, cell_column):
@@ -43,27 +40,32 @@ battleship = """
 print(battleship)
 
 # TUTORIAL
-tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 
-while True:
 
-    if tutorial.lower() == 'aye':
-      print('Welcome to Battleship: OMEGA')
-      print('You aim to find your opponent\'s ships before it finds yours')
-      print('You always find what you can answer at the end of each question.')
-      print('First, you have to decide what size will be the playing field.')
-      print('After that, you have to choose the location of your ships.')
-      print('Finally, you have to hunt down your opponent\'s ships.')
-      print('Have fun!')
-      break
 
-    elif tutorial.lower() == 'no':
-      print('Let\'s play!')
-      break
-
-    else:
-      print('You have to use "aye" or "no" command')
-      tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
+def get_tutorial():
+    tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
+    tutorial_condition = True
+    while tutorial_condition:
+        if tutorial.lower() == 'aye':
+            print('')
+            print('1. Welcome to Battleship: OMEGA')
+            print('2. You aim to find your opponent\'s ships before it finds yours')
+            print('3. You always find what you can answer at the end of each question.')
+            print('4. First, you have to decide what size will be the playing field.')
+            print('')
+            print('5. There is only one playing field')
+            print('6. After that, you have to choose the location of your ships.')
+            print('7. Finally, you have to hunt down your opponent\'s ships.')
+            print('The shots are marked with X, and the opponent\'s shots are marked with Y.')
+            print('Have fun!!!')
+            tutorial_condition = False
+        elif tutorial.lower() == 'no':
+            print('Let\'s play!')
+            tutorial_condition = False
+        else:
+            print('You have to use "aye" or "no" command')
+            tutorial = str(input('Do you want to read the tutorial?(aye/no)'))
 
 # GRID
 grid = []
@@ -207,3 +209,15 @@ else:
             print()
         print(grid[i].ship, end="  ")
     print('')
+
+
+def main():
+
+    """
+    Run all program functions
+    """
+
+    get_tutorial()
+
+print('Welcome to Battleship: OMEGA')
+main()
