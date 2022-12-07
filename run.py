@@ -75,7 +75,7 @@ while ship_counter < grid_size:
     ship_column = random.randint(0,grid_size-1)
     choosen_ship_index = grid_size*ship_row + ship_column
 
-    if (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
+    if grid[choosen_ship_index].ship == ally_ship or grid[choosen_ship_index].ship == opponent_ship:
         continue
     else:
         grid[choosen_ship_index].ship = opponent_ship
