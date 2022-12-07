@@ -61,7 +61,7 @@ while True:
 
 # GRID
 grid = []
-grid_size = int(input('How big should the playfield be?(5/10):'))
+grid_size = int(input('How big should the gaming field be?(5/10):'))
 
 while True:
     if grid_size == 5 or grid_size == 10:
@@ -71,14 +71,28 @@ while True:
         break
     else:
         print('You have to use "5" or "10" numbers')
-        grid_size = int(input('How many columns do you want?(5/10):'))
+        grid_size = int(input('How big should the gaming field be?(5/10):'))
 
 
-for i in range(grid_size*grid_size):
-    if(i%5==0):
-        print()
-    print(grid[i].ship, end="  ")
 print('')
+if grid_size == 5:
+    for i in range(5):
+        print(i, end='  ')
+    print('')
+    for i in range(grid_size * grid_size):
+        if (i % 5 == 0):
+            print()
+        print(grid[i].ship, end="  ")
+    print('')
+else:
+    for i in range(10):
+        print(i, end='  ')
+    print('')
+    for i in range(grid_size * grid_size):
+        if (i % 10 == 0):
+            print()
+        print(grid[i].ship, end="  ")
+    print('')
 
 
 water = 0
@@ -90,7 +104,7 @@ ship_counter = 0
 while ship_counter < grid_size:
 
     ship_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
-    ship_column = int(input(f'Where do you want to put your ship?columns 0-{grid_size-1}:'))
+    ship_column = int(input(f'Where do you want to put your ship?column 0-{grid_size-1}:'))
     choosen_ship_index = grid_size*ship_row + ship_column
 
     if grid[choosen_ship_index].ship == ally_ship:
@@ -130,15 +144,15 @@ while True:
     target_index = grid_size * target_row + target_column
 
     if grid[target_index].ship == opponent_ship:
-        print('hit')
+        print('Aye Aye Captain! HIT!')
         grid[target_index].ship = 'X'
         break
     elif grid[target_index].ship == water:
-        print('miss')
+        print('Aye Aye Captain! MISS!')
         grid[target_index].ship = 'X'
         break
     elif grid[target_index].ship == 'X':
-        print('Still nothing')
+        print('Aye Ay......still nothing there')
         continue
     elif grid[target_index].ship == ally_ship:
         print('Stop the TRAITOR!')
@@ -148,6 +162,7 @@ while True:
         continue
 
 # AI SHOOT
+print('They are firing')
 while True: 
 
     target_row = random.randint(0, grid_size - 1)
@@ -155,22 +170,34 @@ while True:
     target_index = grid_size * target_row + target_column
 
     if grid[target_index].ship == ally_ship:
-        print('hit')
+        print('They hit one of our ships.')
         grid[target_index].ship = 'X'
         break
     elif grid[target_index].ship == water:
-        print('miss')
+        print('They don\'t know where we are! MISS')
         grid[target_index].ship = 'X'
         break
     elif grid[target_index].ship == 'X':
-        print('Still nothing')
         continue
     else:
-        print('You can\'t shoot there')
         continue
 
-for i in range(grid_size*grid_size):
-    if(i%5==0):
-        print()
-    print(grid[i].ship, end="  ")
 print('')
+if grid_size == 5:
+    for i in range(5):
+        print(i, end='  ')
+    print('')
+    for i in range(grid_size * grid_size):
+        if (i % 5 == 0):
+            print()
+        print(grid[i].ship, end="  ")
+    print('')
+else:
+    for i in range(10):
+        print(i, end='  ')
+    print('')
+    for i in range(grid_size * grid_size):
+        if (i % 10 == 0):
+            print()
+        print(grid[i].ship, end="  ")
+    print('')
