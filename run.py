@@ -1,4 +1,10 @@
 import random
+grid= []
+water= 0
+ally_ship= 1
+opponent_ship= 2
+target_user_counter= 0
+target_ai_counter= 0
 
 # CLASS
 class Cell:
