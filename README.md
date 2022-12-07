@@ -38,14 +38,14 @@ I explain the website features below.
 
 ![target_system](/assets/images/target_battleship.png)
 
-- **Leaderboard**
-  - This part shows the saved usernames with their scores. The lowest points are at the bottom of the page, and the highest points are at the top.
+- **End game**
+  - The game ends if the user or the computer lose all of their ships.
 
-![leaderboard2](assets/images/leaderboard.png)
+![game_over](/assets/images/game_over_battleship.png)
 
 ### **Features left to implement**
-- I think a timer or a countdown would be a good idea to add to this quiz
-- I want to add a progress bar next to the score
+- 2nd board for a longer gameplay
+- Multiplayer mode
 
 ## Testing
 
@@ -88,9 +88,10 @@ I explain the website features below.
   - After these mistakes were fixed, no errors were returned when passing through the official [JS validator](https://jshint.com/)
 
 ## Bugs
-
-- If the users 
-- Unfortunately, I 
+- Solved Bugs
+  - The AI choose the same location and started the game with only 3 or 4 ships.
+- Unsolved Bugs
+  - If the users enter nothing when they want to shoot, an error message pop up. 
 
 ## Deployment  
 
