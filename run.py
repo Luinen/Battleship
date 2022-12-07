@@ -174,7 +174,7 @@ def ai_shoot(grid_size):
             target_condition = False
 
 
-def the_end():
+def the_end(grid_size):
     if target_ai_counter == grid_size or target_user_counter == grid_size:
         return True
     else:
@@ -197,7 +197,7 @@ def main():
         ai_shoot(final_grid_size)
         display_grid(final_grid_size)
     print('GAME OVER')
-    if talalt_felh_counter < talalt_ai_counter:
+    if target_user_counter < target_ai_counter:
         print('Better luck next time')
     else:
         print('Congratulations Captain!')
