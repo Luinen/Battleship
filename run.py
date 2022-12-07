@@ -35,7 +35,7 @@ while True:
 
 
 grid = []
-grid_size = int(input('How many columns do you want?(5/10):'))
+grid_size = int(input('How big should the playfield be?(5/10):'))
 
 while True:
     if grid_size == 5 or grid_size == 10:
@@ -50,3 +50,9 @@ while True:
 #  0 - water, empty space
 #  1 - own ship
 #  2 - enemy ship
+
+ship_counter = 0
+while ship_counter < grid_size:
+    if (cell_row >= 0 and cell_column >= 0) and (cell_row <= grid_size-1 and cell_column <= grid_size-1):
+        cell_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
+        cell_column = int(input(f'Where do you want to put your ship?columns 0-{grid_size-1}:'))
