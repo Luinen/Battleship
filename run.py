@@ -53,10 +53,10 @@ opponent_ship = 2
 
 ship_counter = 0
 while ship_counter < grid_size:
-    cell_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
-    cell_column = int(input(f'Where do you want to put your ship?columns 0-{grid_size-1}:'))
-    choosen_ship_index = grid_size*cell_row + cell_column
-    if (cell_row >= 0 and cell_column >= 0) and (cell_row <= grid_size-1 and cell_column <= grid_size-1):
+    ship_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
+    ship_column = int(input(f'Where do you want to put your ship?columns 0-{grid_size-1}:'))
+    choosen_ship_index = grid_size*ship_row + ship_column
+    if (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
         grid[choosen_ship_index].ship = ally_ship
         ship_counter += 1
     else:
