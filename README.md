@@ -49,11 +49,9 @@ I explain the website features below.
 
 ## Testing
 
-  - The game works as intended. 
-  - The scoring system is okay, it gives you 100 points for each correct answer. 
-  - I tested each button and answers.
-  - You have to fill out the username if you want to save your result. 
-  - Responsiveness is good enough for every platform. 
+  - I tried to test as many thing as possible on my phone. 
+  - I checked all the answers in the tutorial. 
+
 
 #### **Validator Testing**
 
@@ -64,9 +62,12 @@ I explain the website features below.
 
 ## Bugs
 - Solved Bugs
-  - The AI choose the same location and started the game with only 3 or 4 ships.
+  - The AI chose the same location and started the game with only 3 or 4 ships.
+  - It was possible if the user fired the same spot in the previous rounds.
+  - The user was able to use numbers in the tutorial and caused an error. 
 - Unsolved Bugs
-  - If the users enter nothing when they want to shoot, an error message pop up. 
+  - Unfortunately, I used Heroku and deployed my project, but I couldn't type anything on that site after that. I tried incognito mode, firefox and chrome, but nothing changed. It freezes all the time. I spent 2,5 hours with tutor assistance, they tried many things, but they didn't find the solution.  I also want to thank you from here.
+  - If the users enter nothing when they want to shoot, an error message pop up.
 
 ## Deployment  
 
