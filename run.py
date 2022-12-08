@@ -115,7 +115,7 @@ def get_user_ship(grid_size):
             else:
                 print('Use numbers in the specified range')
         except IndexError:
-            print('Use numbers in the specified range')
+            print('No more rum for the captain')
 
 
 # AI SHIP
@@ -139,22 +139,25 @@ def user_shoot(grid_size):
         target_row = int(input(f'Captain, time to shoot, row 0-{grid_size - 1}:'))
         target_column = int(input(f'Captain, time to shoot, column 0-{grid_size - 1}:'))
         target_index = grid_size * target_row + target_column
-        if grid[target_index].ship == opponent_ship:
-            print('Aye Aye Captain! HIT!')
-            grid[target_index].ship = 'X'
-            global target_user_counter
-            target_user_counter += 1
-            target_condition = False
-        elif grid[target_index].ship == water:
-            print('Aye Aye Captain! MISS!')
-            grid[target_index].ship = 'X'
-            target_condition = False
-        elif grid[target_index].ship == 'X':
-            print('Aye Ay......still nothing there')
-        elif grid[target_index].ship == ally_ship:
-            print('Stop the TRAITOR!')
-        else:
-            print('You can\'t shoot there')
+        try:
+            if grid[target_index].ship == opponent_ship:
+                print('Aye Aye Captain! HIT!')
+                grid[target_index].ship = 'X'
+                global target_user_counter
+                target_user_counter += 1
+                target_condition = False
+            elif grid[target_index].ship == water:
+                print('Aye Aye Captain! MISS!')
+                grid[target_index].ship = 'X'
+                target_condition = False
+            elif grid[target_index].ship == 'X':
+                print('Aye Ay......still nothing there')
+            elif grid[target_index].ship == ally_ship:
+                print('Stop the TRAITOR!')
+            else:
+                print('You can\'t shoot there')
+        except IndexError:
+            print('We can\'t shoot that far')
 
 
 # AI SHOOT
