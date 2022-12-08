@@ -105,13 +105,16 @@ def get_user_ship(grid_size):
         ship_row = int(input(f'Where do you want to put your ship?row 0-{grid_size-1}:'))
         ship_column = int(input(f'Where do you want to put your ship?column 0-{grid_size-1}:'))
         choosen_ship_index = grid_size*ship_row + ship_column
-        if grid[choosen_ship_index].ship == ally_ship:
-            print('It has already taken')
-        elif (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
-            grid[choosen_ship_index].ship = ally_ship
-            ship_counter += 1
-            print('Great choice')
-        else:
+        try:
+            if grid[choosen_ship_index].ship == ally_ship:
+                print('It has already taken')
+            elif (ship_row >= 0 and ship_column >= 0) and (ship_row <= grid_size-1 and ship_column <= grid_size-1):
+                grid[choosen_ship_index].ship = ally_ship
+                ship_counter += 1
+                print('Great choice')
+            else:
+                print('Use numbers in the specified range')
+        except IndexError:
             print('Use numbers in the specified range')
 
 

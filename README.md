@@ -66,7 +66,7 @@ I explain the website features below.
   - It was possible if the user fired the same spot in the previous rounds.
   - The user was able to use numbers in the tutorial and caused an error. 
 - Unsolved Bugs
-  - Unfortunately, I used Heroku and deployed my project, but I couldn't type anything on that site after that. I tried incognito mode, firefox and chrome, but nothing changed. It freezes all the time. I spent 2,5 hours with tutor assistance, they tried many things, but they didn't find the solution.  I also want to thank you from here.
+  - Unfortunately, I used Heroku and deployed my project, but I couldn't type anything on that site after that. I tried incognito mode, firefox and chrome, but nothing changed. It freezes all the time. I spent 2,5 hours with tutor assistance, they tried many things, but they didn't find the solution.  I also want to thank you from here. It works on other computers.
   - If the users enter nothing when they want to shoot, an error message pop up.
 
 ## Deployment  
